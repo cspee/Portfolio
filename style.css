@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent
+}
+
+li {
+    list-style-type: none;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper { 
+    width: 100%;
+    background-color: black;
+}
+
+
+
+
+
+.container { 
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotip {
+    color: white;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navList {
+    flex-wrap: wrap;
+    display: flex; 
+    gap: 180px;
+}
+
+.navList li {
+    position: relative;
+
+}
+
+.navList li a{
+
+    color: white;
+    font-family: "Bitter", serif;
+    transition: 1s;
+    border-bottom: 0 solid white;
+}
+
+.navList li a:after { /*:after псевдоэлемент*/
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: white;
+    transition: 1s;
+}
+
+.navList li a:hover::after {
+    width: 100%;
+}
+
+
+
+.mainContainer {
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+    
+}
+
+.photo {
+    position: absolute; /* Устанавливаем позиционирование изображения */
+    top: 0; /* Выравниваем изображение по верхнему краю контейнера */
+    left: 500px;
+    width: 50%;
+    height: 100%;
+}
+
+.textMain {
+    height: 100vh;
+    max-width: 250px;
+    position: relative;
+}
+
+.firstText {
+    position: absolute;
+    color: white;
+    font-family: "Bitter", serif;
+    font-size: 13px;
+    top: 250px;
+}
+
+.animatedText {
+    width: 1000px;
+    top: 130px;
+    position: absolute;
+    font-size: 100px;
+    color: red;
+}
+
+.letters {   
+    animation: fadeIn 3s ease forwards;
+}
+
+.list {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0; /* Начальное состояние - полностью прозрачный */
+    }
+    50% {
+      opacity: 1; /* Появление - полностью непрозрачный */
+    }
+    100% {
+      opacity: 0; /* Затухание - снова становится полностью прозрачным */
+    }
+  }
+  
+
+.letters:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.letters:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.letters:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.letters:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.letters:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.letters:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.aboutContacts {
+    max-width: 100px;
+    height: 100px;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none; /* Чтобы скрытый элемент не реагировал на события мыши */
+    transition: opacity 0.5s ease; /* Анимация появления с плавным переходом */
+}
+
+.aboutContacts {
+    width: 100%;
+}
+
+
+.contText{
+    transition: 1s;
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    color: black;
+}
+
+.contactText__active {
+    opacity: 1;
+}
